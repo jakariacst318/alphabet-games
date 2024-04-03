@@ -13,21 +13,22 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center  ">
+
         <!-- home section -->
-        <section class="start  min-h-screen text-[#fff] flex items-center justify-center hidden  ">
+        <section id="home-screen" class="  min-h-screen text-[#fff] flex items-center justify-center   ">
             <div class=" flex flex-col items-center ">
                 <h1 class="text-[10rem]  font-anton ">ALPHABET CLASH</h1>
                 <p class=" text-[1.4rem] font-poppins -mt-8 ">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
                 <!-- <button>Play Now</button> -->
-                <button class=" btn bg-white text-black mt-14">Play Now</button>
+                <button onclick="playNow()" class=" btn bg-white text-black mt-14">Play Now</button>
             </div>
         </section>
 
 
         <!-- paly game section start -->
-        <section class="play-game hidden">
+        <section id="play-game" class=" hidden">
             <div class="flex flex-col  items-center gap-20 pt-20">
                 <!-- screen  -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC]	bg-[#FFFFFFB3]">
@@ -95,7 +96,7 @@
         <!-- paly game section end -->
 
         <!-- score -->
-        <section class="score flex justify-center items-center min-h-screen ">
+        <section class="score flex justify-center items-center min-h-screen hidden">
 
             <div class="text-white text-center space-y-8 bg-[#FFFFFF33] p-8 rounded-lg"> 
                 <h1 class="text-7xl">
@@ -107,6 +108,9 @@
             </div>
         </section>
     </main>
+
+    <script src="js/utility-funtiom.js"></script>
+    <script src="js/alphabet.js"></script>
 </body>
 
 </html>
