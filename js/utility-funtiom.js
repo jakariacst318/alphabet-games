@@ -8,7 +8,15 @@ function showElementById(elementID){
     const element = document.getElementById(elementID)
     element.classList.remove('hidden')
 }
-// contin
+
+//  background color show 1
+function setBackgroundColorById(elementID){
+    const element =document.getElementById(elementID)
+    element.classList.add('bg-orange-400')
+}
+
+
+// contineu
 function getRandomAlphabet(){
     // get a create alphabet array []
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';

@@ -16,7 +16,15 @@ function playNow(){
 function contineoGames() {
     //step -1 generate random number 
     const generateAlphabet = getRandomAlphabet()
-    console.log('your alphabet :', generateAlphabet)
+    // console.log('your alphabet :', generateAlphabet)
+
+    const currentAlphabetElement = document.getElementById('curnnet-alphabet')
+    currentAlphabetElement.innerText = generateAlphabet;
+
+    // background-color set 2
+    setBackgroundColorById(generateAlphabet)
+
+
 
 }
 
