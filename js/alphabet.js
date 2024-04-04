@@ -13,6 +13,32 @@ function playNow(){
 }
  */
 
+
+// button pass keyboard
+function handelKeyboardButtonPress(event){
+    // console.log(event.key )
+    const playerPassKeyboard = event.key;
+
+    // get the expected to press
+    const currentAlphabetElement = document.getElementById('curnnet-alphabet');
+    const currentAlphabet = currentAlphabetElement.innerText;
+    // console.log(playerPassKeyboard,currentAlphabet)
+
+    //  check marched or not 
+     if(playerPassKeyboard === currentAlphabet){
+        // console.log('winner boy')
+        removeBackgroundColorById(currentAlphabet)
+        contineoGames()
+     }
+     else{
+        console.log('sad abr try koro')
+     }
+    
+}
+    // capture keyboard key pass
+document.addEventListener('keyup',handelKeyboardButtonPress)
+
+
 function contineoGames() {
     //step -1 generate random number 
     const generateAlphabet = getRandomAlphabet()

@@ -9,10 +9,15 @@ function showElementById(elementID){
     element.classList.remove('hidden')
 }
 
-//  background color show 1
+//  keyboard background color show 1
 function setBackgroundColorById(elementID){
     const element =document.getElementById(elementID)
     element.classList.add('bg-orange-400')
+}
+
+function removeBackgroundColorById(elementID){
+    const element = document.getElementById(elementID)
+    element.classList.remove('bg-orange-400')
 }
 
 
