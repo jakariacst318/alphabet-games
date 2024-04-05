@@ -27,8 +27,15 @@ function handelKeyboardButtonPress(event){
     //  check marched or not 
      if(playerPassKeyboard === currentAlphabet){
         // console.log('winner boy')
+        const currenScoreElement = document.getElementById('curnnet-score')
+        const currentScoreText = currenScoreElement.innerText;
+        const currentScoreConvet =parseInt(currentScoreText) 
+        const newScore = currentScoreConvet + 1;
+        currenScoreElement.innerText = newScore
+
         removeBackgroundColorById(currentAlphabet)
         contineoGames()
+        
      }
      else{
         console.log('sad abr try koro')
