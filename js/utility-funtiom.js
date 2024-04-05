@@ -20,6 +20,21 @@ function removeBackgroundColorById(elementID){
     element.classList.remove('bg-orange-400')
 }
 
+//  score , life update function start
+
+function getTextElemntValueById(elementID){
+    const element = document.getElementById(elementID);
+    const elementText = element.innerText;
+    const elementTextConvert = parseInt(elementText);
+    return elementTextConvert ;
+}
+
+function setTextElemntValueById(elementID, value){
+    const element = document.getElementById(elementID)
+    element.innerText = value ;
+}
+//  score , life update function end
+
 
 // contineu
 function getRandomAlphabet(){

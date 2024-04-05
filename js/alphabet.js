@@ -16,29 +16,47 @@ function playNow(){
 
 // button pass keyboard
 function handelKeyboardButtonPress(event){
-    // console.log(event.key )
     const playerPassKeyboard = event.key;
 
     // get the expected to press
     const currentAlphabetElement = document.getElementById('curnnet-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
-    // console.log(playerPassKeyboard,currentAlphabet)
 
     //  check marched or not 
      if(playerPassKeyboard === currentAlphabet){
-        // console.log('winner boy')
+        const currentScore = getTextElemntValueById('curnnet-score')
+        const updateScore = currentScore + 1;
+
+        setTextElemntValueById('curnnet-score', updateScore)
+
+      // *************  again to code by function ********** 
+       /* 
         const currenScoreElement = document.getElementById('curnnet-score')
         const currentScoreText = currenScoreElement.innerText;
         const currentScoreConvet =parseInt(currentScoreText) 
         const newScore = currentScoreConvet + 1;
         currenScoreElement.innerText = newScore
-
+ */
         removeBackgroundColorById(currentAlphabet)
         contineoGames()
         
      }
      else{
-        console.log('sad abr try koro')
+        const currentLife = getTextElemntValueById('curnnet-life')
+        const updatesLife = currentLife -1 ;
+        setTextElemntValueById('curnnet-life', updatesLife)
+
+
+
+         // console.log('sad try again')
+        // *************  again to code by function ********** 
+        /* 
+        const currenLifeElement = document.getElementById('curnnet-life');
+        const currentLifeText = currenLifeElement.innerText;
+        const currenLifeConvert = parseInt(currentLifeText);
+        const newLife = currenLifeConvert -1;
+        currenLifeElement.innerText = newLife
+         */
      }
     
 }
@@ -49,7 +67,6 @@ document.addEventListener('keyup',handelKeyboardButtonPress)
 function contineoGames() {
     //step -1 generate random number 
     const generateAlphabet = getRandomAlphabet()
-    // console.log('your alphabet :', generateAlphabet)
 
     const currentAlphabetElement = document.getElementById('curnnet-alphabet')
     currentAlphabetElement.innerText = generateAlphabet;
