@@ -97,16 +97,18 @@
         </section>
         <!-- paly game section end -->
 
-        <!-- score -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <!-- final score -->
+        <section id="final-score" class=" flex justify-center items-center min-h-screen hidden">
 
-            <div class="text-white text-center space-y-8 bg-[#FFFFFF33] p-8 rounded-lg"> 
+            <div class="text-white text-center space-y-8 bg-[#FFFFFF33] p-8 rounded-lg">
+                <h1 class="text-3xl bg-red-500 py-2 rounded-lg">Game Over !</h1> 
                 <h1 class="text-7xl">
                     <span class=" font-bold">Score :</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Agin</button>
+                <button onclick="playNow()" class="btn">Play Agin</button>
                 <p>Practice will make you Pro</p>
+                <p><small> developer by: js jakaria</small></p>
             </div>
         </section>
     </main>

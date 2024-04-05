@@ -20,8 +20,14 @@ function removeBackgroundColorById(elementID){
     element.classList.remove('bg-orange-400')
 }
 
-//  score , life update function start
+// curnnet-alphabet add / clear function
+function  getElemntTextById(elementID){
+    const element = document.getElementById(elementID)
+    const text =  element.innerText;
+    return text
+}
 
+//  score , life update function start
 function getTextElemntValueById(elementID){
     const element = document.getElementById(elementID);
     const elementText = element.innerText;
